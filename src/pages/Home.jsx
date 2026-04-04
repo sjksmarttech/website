@@ -27,7 +27,7 @@ export default function Home() {
         <article className="dual-panel">
           <h2>Professional services</h2>
           <p>
-            12+ years building and leading enterprise web applications—with depth in Next.js,
+            We bring 12+ years building and leading enterprise web applications—with depth in Next.js,
             CodeIgniter, Laravel, AWS, and Docker. UML-aware design, AI tooling where it helps, and
             clear communication across teams and clients.
           </p>

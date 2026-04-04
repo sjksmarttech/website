@@ -6,19 +6,19 @@ export default function Professional() {
     <div className="page">
       <h1 className="page__title">Professional profile</h1>
       <p className="page__lead">
-        Results-driven full-stack developer with 12+ years of hands-on experience developing,
-        architecting, and managing enterprise-level web applications.
+        We are results-driven full-stack practitioners with 12+ years of hands-on experience
+        developing, architecting, and managing enterprise-level web applications.
       </p>
 
       <section className="section">
         <h2 className="section__title">Summary</h2>
         <p style={{ color: 'var(--muted)', marginTop: 0 }}>
-          Expert in modern front ends and proven PHP frameworks, with strong cloud and container
-          skills. Passionate about integrating AI tools responsibly, UML-based design thinking, and
-          delivering scalable, user-centric solutions. Experienced leader in cross-functional teams,
-          full project lifecycle delivery, and client collaboration. I work comfortably with SRE and
-          DevOps practices—reliability targets, monitoring, and observability inform how I design,
-          deploy, and operate software in production.
+          We are experts in modern front ends and proven PHP frameworks, with strong cloud and container
+          skills. We are passionate about integrating AI tools responsibly, UML-based design thinking,
+          and delivering scalable, user-centric solutions. We lead in cross-functional settings across
+          the full project lifecycle and with clients. We work comfortably with SRE and DevOps
+          practices—reliability targets, monitoring, and observability inform how we design, deploy,
+          and operate software in production.
         </p>
       </section>
 
