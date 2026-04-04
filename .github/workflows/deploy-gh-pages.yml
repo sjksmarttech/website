@@ -24,7 +24,13 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run build
+
+      # Vite base must match project URL https://USER.github.io/REPO/ or assets 404 → blank page.
+      # Override: repo Variable PAGES_BASE = / when using only a custom domain at the domain root.
+      - name: Build
+        run: npm run build
+        env:
+          GITHUB_PAGES_BASE: ${{ vars.PAGES_BASE || format('/{0}/', github.event.repository.name) }}
 
       - uses: JamesIves/github-pages-deploy-action@v4
         with:

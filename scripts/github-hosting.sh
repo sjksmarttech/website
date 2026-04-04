@@ -35,6 +35,16 @@ fi
 
 echo ""
 echo "==> Production build (dist/ + 404.html + .nojekyll for SPA routing)"
+# Match https://USER.github.io/REPO/ so JS/CSS paths resolve (avoid blank GitHub Pages).
+if [[ -z "${GITHUB_PAGES_BASE:-}" ]] && git remote get-url origin &>/dev/null; then
+  _url="$(git remote get-url origin)"
+  _repo="${_url%.git}"
+  _repo="${_repo##*/}"
+  if [[ -n "$_repo" && "$_repo" != "*" ]]; then
+    export GITHUB_PAGES_BASE="/${_repo}/"
+    echo "    Using GITHUB_PAGES_BASE=${GITHUB_PAGES_BASE} (from git remote)."
+  fi
+fi
 npm run build
 
 echo ""
@@ -81,9 +91,10 @@ cat <<'STEPS'
 
   5) SPA routes: build copies index.html to dist/404.html so deep links work on Pages.
 
-  vite.config.js uses base: '/' (custom domain or site served at domain root).
-  Only if the live URL is https://USER.github.io/REPO/ with no custom domain,
-  set base to '/REPO/' and rebuild before pushing.
+  GitHub Actions sets GITHUB_PAGES_BASE from the repo name (e.g. /website/) so
+  https://USER.github.io/REPO/ loads JS/CSS correctly. If you use ONLY a custom
+  domain at the site root, add repo Variable PAGES_BASE = / (Settings → Actions
+  → Variables). Local ./scripts/github-hosting.sh infers /REPO/ from git remote.
 
 STEPS
 
