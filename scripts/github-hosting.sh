@@ -81,8 +81,9 @@ cat <<'STEPS'
 
   5) SPA routes: build copies index.html to dist/404.html so deep links work on Pages.
 
-  If you use a project site WITHOUT a custom domain (https://sjksmarttech.github.io/website/),
-  set base in vite.config.js to '/website/' and rebuild before pushing.
+  vite.config.js uses base: '/' (custom domain or site served at domain root).
+  Only if the live URL is https://USER.github.io/REPO/ with no custom domain,
+  set base to '/REPO/' and rebuild before pushing.
 
 STEPS
 
