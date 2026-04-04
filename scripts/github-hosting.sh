@@ -51,7 +51,7 @@ cat <<'STEPS'
        git add .
        git commit -m "Initial site"
        git branch -M main
-       git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
+       git remote add origin https://github.com/sjksmarttech/website.git
        git push -u origin main
 
      If the repo already exists and has a remote:
@@ -59,24 +59,30 @@ cat <<'STEPS'
        git remote -v
        git push -u origin main
 
-  3) Enable GitHub Pages with Actions:
-       GitHub repo → Settings → Pages → Build and deployment
-       → Source: "GitHub Actions" (not "Deploy from a branch").
+  3) Enable GitHub Pages — pick ONE:
 
-  4) First push to main/master runs .github/workflows/deploy-pages.yml.
-     Check: Actions tab → latest workflow → should be green.
-     Your site URL appears in the workflow summary (Pages environment URL).
+     A) Site on a separate branch (main = code, gh-pages = built files):
+        GitHub repo → Settings → Pages → Build and deployment
+        → Source: "Deploy from a branch"
+        → Branch: gh-pages, folder: / (root)
+        Push this repo with .github/workflows/deploy-gh-pages.yml on main.
+        Each push to main builds and updates gh-pages (see Actions tab).
 
-  5) Custom domain (sjksmarttech.com):
+     B) No publish branch — deploy only via Actions artifact:
+        Settings → Pages → Source: "GitHub Actions"
+        Use a workflow that uploads the dist artifact (not this project's
+        gh-pages workflow).
+
+  4) Custom domain (sjksmarttech.com):
        - public/CNAME already contains the hostname for Pages.
        - In repo Settings → Pages → Custom domain: sjksmarttech.com
        - At your DNS provider, add the records GitHub shows (A/AAAA or CNAME).
        - Wait for DNS; optionally enforce HTTPS in Pages settings.
 
-  6) SPA routes: build copies index.html to dist/404.html so deep links work on Pages.
+  5) SPA routes: build copies index.html to dist/404.html so deep links work on Pages.
 
-  If you use a project site WITHOUT a custom domain (https://USER.github.io/REPO/),
-  set base in vite.config.js to '/REPO/' and rebuild before pushing.
+  If you use a project site WITHOUT a custom domain (https://sjksmarttech.github.io/website/),
+  set base in vite.config.js to '/website/' and rebuild before pushing.
 
 STEPS
 
