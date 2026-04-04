@@ -6,7 +6,7 @@ export default function Store() {
     <div className="page">
       <h1 className="page__title">Amazon storefront</h1>
       <p className="page__lead">
-        reactSJK SmartTech operates an online retail presence on Amazon, offering practical products
+        SJK SmartTech operates an online retail presence on Amazon, offering practical products
         for homes, students, and daily upkeep.
       </p>
 

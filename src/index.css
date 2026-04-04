@@ -1,19 +1,22 @@
 :root {
-  --bg: #05070a;
-  --surface: #0c1017;
-  --surface-elevated: #121a24;
-  --text: #f1f5f9;
-  --muted: #94a3b8;
-  --accent: #00e5ff;
-  --accent-soft: #22d3ee;
-  --accent-blue: #2979ff;
-  --accent-lime: #c8f902;
-  --link: #67e8f9;
-  --link-hover: #a5f3fc;
-  --border: #1e293b;
+  --bg: #f1f5f9;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #0d9488;
+  --accent-deep: #0f766e;
+  --accent-soft: #14b8a6;
+  --accent-blue: #0369a1;
+  --accent-warm: #0e7490;
+  --link: #0d9488;
+  --link-hover: #0f766e;
+  --border: #e2e8f0;
   --radius: 12px;
-  --shadow: 0 4px 24px rgb(0 0 0 / 0.45);
+  --shadow: 0 4px 24px rgb(15 23 42 / 0.06);
+  --shadow-sm: 0 1px 3px rgb(15 23 42 / 0.06);
   --max: 1100px;
+  --code-bg: #f1f5f9;
 }
 
 *,
@@ -33,8 +36,8 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
-  background-image: radial-gradient(ellipse 120% 80% at 50% -20%, rgb(41 121 255 / 0.12), transparent 50%),
-    radial-gradient(ellipse 80% 50% at 100% 50%, rgb(0 229 255 / 0.06), transparent 45%);
+  background-image: radial-gradient(ellipse 100% 80% at 50% -30%, rgb(13 148 136 / 0.08), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgb(3 105 161 / 0.06), transparent 50%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
@@ -59,4 +62,13 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+code {
+  font-size: 0.88em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  font-family: ui-monospace, monospace;
 }

@@ -6,14 +6,14 @@ export default function Contact() {
     <div className="page">
       <h1 className="page__title">Contact</h1>
       <p className="page__lead">
-        Reach reactSJK SmartTech for professional inquiries, retail correspondence, or GST billing
+        Reach SJK SmartTech for professional inquiries, retail correspondence, or GST billing
         details.
       </p>
 
       <div className="contact-block">
         <dl>
           <dt>Business name</dt>
-          <dd>reactSJK SmartTech</dd>
+          <dd>SJK SmartTech</dd>
 
           <dt>Website</dt>
           <dd>
@@ -27,7 +27,7 @@ export default function Contact() {
 
           <dt>Phone</dt>
           <dd>
-            <a href="tel:+919495670824">+91-9495670824</a>
+            <a href="tel:+918848235872">+91-8848235872</a>
           </dd>
 
           <dt>GSTIN</dt>

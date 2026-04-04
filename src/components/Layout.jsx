@@ -8,11 +8,12 @@ export default function Layout({ children }) {
         <div className="site-header__inner">
           <NavLink to="/" className="brand" end>
             <img
-              src={`${import.meta.env.BASE_URL}logo.png`}
+              src={`${import.meta.env.BASE_URL}sjk-round-logo.png`}
               alt="SJK smarttech"
               className="brand__logo"
-              width={220}
-              height={56}
+              width={1024}
+              height={1024}
+              decoding="async"
             />
           </NavLink>
           <nav className="nav" aria-label="Main">
@@ -34,16 +35,26 @@ export default function Layout({ children }) {
       <main className="site-main">{children}</main>
       <footer className="site-footer">
         <div className="site-footer__inner">
-          <p className="site-footer__brand">reactSJK SmartTech</p>
+          <div className="site-footer__brand-row">
+            <img
+              src={`${import.meta.env.BASE_URL}sjk-round-logo.png`}
+              alt="SJK smarttech"
+              className="site-footer__logo"
+              width={96}
+              height={96}
+              decoding="async"
+            />
+            <p className="site-footer__brand">SJK SmartTech</p>
+          </div>
           <p className="site-footer__meta">
             <a href="https://sjksmarttech.com">sjksmarttech.com</a>
             {' · '}
             <a href="mailto:sjksmarttech@gmail.com">sjksmarttech@gmail.com</a>
             {' · '}
-            <a href="tel:+919495670824">+91-9495670824</a>
+            <a href="tel:+918848235872">+91-8848235872</a>
           </p>
           <p className="site-footer__gst">GSTIN: 32CGIPM6664G1Z8</p>
-          <p className="site-footer__copy">© {new Date().getFullYear()} reactSJK SmartTech. All rights reserved.</p>
+          <p className="site-footer__copy">© {new Date().getFullYear()} SJK SmartTech. All rights reserved.</p>
         </div>
       </footer>
     </>

@@ -27,7 +27,7 @@ export default function Professional() {
         <div className="card-grid">
           <div className="card">
             <h3>Front end</h3>
-            <p>Next.js, React, component-driven UI, performance and accessibility awareness.</p>
+            <p>Next.js, component-driven UIs, performance tuning, and accessibility awareness.</p>
           </div>
           <div className="card">
             <h3>Back end</h3>

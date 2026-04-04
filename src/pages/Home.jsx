@@ -8,7 +8,7 @@ export default function Home() {
         <div className="hero__inner">
           <h1 className="hero__title">Technology expertise. Thoughtful retail.</h1>
           <p className="hero__text">
-            reactSJK SmartTech brings together enterprise-grade full-stack development and a curated
+            SJK SmartTech brings together enterprise-grade full-stack development and a curated
             Amazon storefront focused on everyday quality—microfiber essentials, student items, and
             reliable home-care products.
           </p>
@@ -27,7 +27,7 @@ export default function Home() {
         <article className="dual-panel">
           <h2>Professional services</h2>
           <p>
-            12+ years building and leading enterprise web applications—with depth in Next.js, React,
+            12+ years building and leading enterprise web applications—with depth in Next.js,
             CodeIgniter, Laravel, AWS, and Docker. UML-aware design, AI tooling where it helps, and
             clear communication across teams and clients.
           </p>
