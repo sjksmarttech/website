@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-# Build the site and show how to host it on GitHub Pages (GitHub Actions workflow).
+# Build the site and show how to host it on GitHub Pages.
+#
+# Run with bash (required). If you use `sh scripts/github-hosting.sh`, POSIX sh cannot parse
+# BASH_SOURCE, [[ ... ]], or pipefail — we re-exec under bash automatically.
+if [ -z "${BASH_VERSION:-}" ]; then
+  exec env bash "$0" "$@"
+fi
+
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -101,4 +108,8 @@ STEPS
 echo "-------------------------------------------------------------------"
 echo " Build output: $ROOT/dist"
 echo " Done."
+echo ""
+echo "Tip: Prefer  bash scripts/github-hosting.sh  or  npm run host:github"
+echo "     If  npm run dev  errors on node_modules/.vite (ENOENT), run:"
+echo "     rm -rf node_modules/.vite && npm run dev"
 echo ""

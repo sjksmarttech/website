@@ -274,3 +274,120 @@
 .contact-block a:hover {
   color: var(--accent-deep);
 }
+
+/* Store page */
+.store-intro {
+  color: var(--muted);
+  margin: 0 0 1rem;
+  max-width: 42rem;
+}
+
+.store-product {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .store-product {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+}
+
+.store-product__gallery {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.store-product__figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.store-product__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.store-product__name {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.store-product__text {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.store-product__body {
+  padding-top: 0.25rem;
+}
+
+.store-feature-list {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.store-feature-list li {
+  margin-bottom: 0.4rem;
+}
+
+.store-category {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 640px) {
+  .store-category {
+    grid-template-columns: minmax(140px, 200px) minmax(0, 1fr);
+  }
+}
+
+.store-category__visual {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(145deg, #f8fafc 0%, #ecfeff 100%);
+}
+
+.store-category__visual--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  border-style: dashed;
+  background: #f8fafc;
+}
+
+.store-category__body p:first-of-type {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.store-category__body p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
