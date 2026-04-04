@@ -16,9 +16,9 @@ export default function Professional() {
           Expert in modern front ends and proven PHP frameworks, with strong cloud and container
           skills. Passionate about integrating AI tools responsibly, UML-based design thinking, and
           delivering scalable, user-centric solutions. Experienced leader in cross-functional teams,
-          full project lifecycle delivery, and client collaboration. At home, we pair this with a
-          strong operations mindset—my spouse works in SRE and DevOps—which keeps reliability and
-          observability part of everyday conversation.
+          full project lifecycle delivery, and client collaboration. I work comfortably with SRE and
+          DevOps practices—reliability targets, monitoring, and observability inform how I design,
+          deploy, and operate software in production.
         </p>
       </section>
 
@@ -35,7 +35,10 @@ export default function Professional() {
           </div>
           <div className="card">
             <h3>Cloud &amp; platform</h3>
-            <p>AWS services, Docker, deployment patterns aligned with modern DevOps practice.</p>
+            <p>
+              AWS services, Docker, CI/CD-friendly workflows, and deployment patterns aligned with
+              modern DevOps and SRE thinking—uptime, performance, and actionable telemetry.
+            </p>
           </div>
           <div className="card">
             <h3>Design &amp; AI</h3>

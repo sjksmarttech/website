@@ -53,9 +53,9 @@ export default function Home() {
           <h2 className="section__title">Why one site for both</h2>
           <p className="page__lead" style={{ marginBottom: 0 }}>
             The same discipline that goes into scalable software—reliability, clarity, and respect for
-            the end user—guides how we source and present retail products. Our household includes
-            hands-on SRE and DevOps practice, which reinforces a culture of operational excellence in
-            everything we ship, whether it is code or a customer order.
+            the end user—guides how we source and present retail products. SRE and DevOps practices
+            shape how we run systems and fulfill orders, so operational excellence shows up in both
+            technology delivery and customer-facing retail.
           </p>
         </section>
         <section className="section">
