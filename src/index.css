@@ -1,0 +1,62 @@
+:root {
+  --bg: #05070a;
+  --surface: #0c1017;
+  --surface-elevated: #121a24;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #00e5ff;
+  --accent-soft: #22d3ee;
+  --accent-blue: #2979ff;
+  --accent-lime: #c8f902;
+  --link: #67e8f9;
+  --link-hover: #a5f3fc;
+  --border: #1e293b;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgb(0 0 0 / 0.45);
+  --max: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  background-image: radial-gradient(ellipse 120% 80% at 50% -20%, rgb(41 121 255 / 0.12), transparent 50%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgb(0 229 255 / 0.06), transparent 45%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

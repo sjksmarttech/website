@@ -1,0 +1,129 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(5 7 10 / 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 0 rgb(0 229 255 / 0.08);
+}
+
+.site-header__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0.65rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand:hover {
+  text-decoration: none;
+  filter: brightness(1.06);
+}
+
+.brand__logo {
+  height: 52px;
+  width: auto;
+  max-width: min(240px, 72vw);
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  align-items: center;
+}
+
+.nav__link {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+  letter-spacing: 0.02em;
+}
+
+.nav__link:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav__link--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent-lime);
+  text-shadow: 0 0 24px rgb(0 229 255 / 0.35);
+}
+
+.site-main {
+  flex: 1;
+  width: 100%;
+}
+
+.site-footer {
+  margin-top: auto;
+  background: #020305;
+  color: #cbd5e1;
+  padding: 2rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.site-footer a {
+  color: var(--accent-soft);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+.site-footer__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer__brand {
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.site-footer__meta {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+}
+
+.site-footer__gst {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
