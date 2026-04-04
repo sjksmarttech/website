@@ -36,7 +36,7 @@ export default function Home() {
           </Link>
         </article>
         <article className="dual-panel">
-          <h2>Amazon storefront</h2>
+          <h2>Amazon storefront technology</h2>
           <p>
             Practical products chosen for real homes and students: microfiber cloths and towels,
             study-friendly accessories, sponge scrubbers, and similar household essentials—fulfilled
