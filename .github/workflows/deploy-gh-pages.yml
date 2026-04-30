@@ -25,12 +25,25 @@ jobs:
 
       - run: npm ci
 
-      # Vite base must match project URL https://USER.github.io/REPO/ or assets 404 → blank page.
-      # Override: repo Variable PAGES_BASE = / when using only a custom domain at the domain root.
+      # Vite base must match the deployed URL:
+      # - custom domain (public/CNAME present): /
+      # - project pages fallback: /REPO/
+      # Repo variable PAGES_BASE, when set, always takes priority.
+      - name: Compute base path
+        id: base
+        run: |
+          if [ -n "${{ vars.PAGES_BASE }}" ]; then
+            echo "value=${{ vars.PAGES_BASE }}" >> "$GITHUB_OUTPUT"
+          elif [ -f public/CNAME ]; then
+            echo "value=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build
         run: npm run build
         env:
-          GITHUB_PAGES_BASE: ${{ vars.PAGES_BASE || format('/{0}/', github.event.repository.name) }}
+          GITHUB_PAGES_BASE: ${{ steps.base.outputs.value }}
 
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
